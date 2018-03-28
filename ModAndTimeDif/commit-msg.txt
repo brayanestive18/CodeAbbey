@@ -1,0 +1,5 @@
+Solution: codeabbey, 12 (4.50)
+other: 21 in, 3316 out, 3337 total
+global-rank: 5850 initial, 5484 final, 366 progress.
+national-rank: 112 initial, 108 final, 4 progress.
+effort: 0.70 hours during challenges phase.
