@@ -1,7 +1,26 @@
 #!/usr/bin/env python
 
 """ Module and time difference
-Solution problem # 12 - Module and time difference
+python modAndTimeDif.py
+
+Ingrese la cantidad de datos: 12
+Ingrese las fechas:
+0 20 40 57 13 18 29 37
+12 13 23 22 19 20 43 4
+3 8 50 2 8 19 48 6
+15 21 27 39 16 17 14 1
+8 11 59 33 20 2 16 56
+11 7 56 40 27 18 59 34
+25 20 9 6 29 14 57 22
+10 12 40 7 28 17 29 5
+18 15 26 51 29 7 1 38
+10 7 48 56 13 0 56 15
+4 16 23 20 21 0 2 57
+12 14 0 2 17 14 49 52
+
+Output
+(12 21 48 40) (7 7 19 42) (5 10 58 4) (0 19 46 22) (11 14 17 23) (16 11 2 54) 
+(3 18 48 16) (18 4 48 58) (10 15 34 47) (2 17 7 19) (16 7 39 37) (5 0 49 50)
 
 """
 
@@ -41,7 +60,3 @@ for i in range(0, cnt):
 
 print "Resultados: "
 print ' '.join(res)
-
-"""
-python modAndTimeDif.py
-"""
