@@ -23,10 +23,11 @@ Output
 (3 18 48 16) (18 4 48 58) (10 15 34 47) (2 17 7 19) (16 7 39 37) (5 0 49 50)
 
 """
+from pip._vendor.distlib.compat import raw_input
 
 cnt = int(raw_input("Ingrese la cantidad de datos: "))
 
-print "Ingrese las fechas: "
+print("Ingrese las fechas: ")
 res = []
 
 for i in range(0, cnt):
@@ -48,15 +49,15 @@ for i in range(0, cnt):
 	dif = ts2 - ts1
 	
 	# Volvemos la diferencia a su respectivas unidades
-	s1 = dif % 60
+	s1 = int(dif % 60)
 	dif /= 60
-	m1 = dif % 60
+	m1 = int(dif % 60)
 	dif /= 60
-	h1 = dif % 24
+	h1 = int(dif % 24)
 	dif /= 24
-	d1 = dif
+	d1 = int(dif)
 
 	res.append('(' + str(d1) + ' ' + str(h1) + ' ' + str(m1) + ' ' + str(s1) + ')')
 
-print "Resultados: "
-print ' '.join(res)
+print("Resultados: ")
+print(' '.join(res))

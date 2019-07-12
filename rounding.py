@@ -27,11 +27,12 @@ Output
 -4 -1 6 1 -3 6578 10 10 10 -7 9 10560 5903 20931
 
 """
+from pip._vendor.distlib.compat import raw_input
 
 div = []
 
 cnt = raw_input("Ingrese el total de numeros de datos: ")
-print "Ingrese los numeros: "
+print("Ingrese los numeros: ")
 for i in range(0, int(cnt)):
 	data = raw_input().split()
 
@@ -40,7 +41,7 @@ for i in range(0, int(cnt)):
 
 	if d_i >= 0.5:
 		div.append(str(int(d) + 1))
-	elif d_i >= 0 and d_i < 0.5:
+	elif 0 <= d_i < 0.5:
 		div.append(str(int(d)))
 	else:
 		if d_i >= -0.5:
@@ -48,4 +49,4 @@ for i in range(0, int(cnt)):
 		else:
 			div.append(str(int(d) - 1))
 
-print ' '.join(div)
+print(' '.join(div))
