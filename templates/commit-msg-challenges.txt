@@ -1,0 +1,74 @@
+################################################################################
+#### Commit template for solutions to challenges in training/code ##############
+#### and training/hack #########################################################
+################################################################################
+#
+# Fill the fields in angle brackets <> as indicated in these comments.
+# These comments will not appear in the final commit message.
+# <scope> can either be code for programming or hack for ctf-hacking
+# <site-name> and <chall-code> must conform to repository naming conventions
+# <complexity> is the blessing in codeabbey (can be a decimal), v.g. 9.33
+# or something else (but no parens) for hacking sites, v.g. easy or 3 or 147
+# Typically it should be equal to the progress in score as computed by wechall.
+# programming example: sol(code): #0 codeabbey, 12 (9.8)
+# hacking example:     sol(hack): #0 2017game-picoctf, challenge-5 (20)
+# The line after the commit title and the final line MUST be blank,
+# but there must not be a blank line at the beggining.
+#
+####### begin template #######
+sol(<scope>): #0 <site-name>, <chall-code> (<complexity>)
+
+- others: M in, N out, M+N total.
+- score: X initial, Y final, Y-X progress.
+- global-rank: M initial, N final, M-N progress.
+- national-rank: M initial, N final, M-N progress.
+- effort: H hours during <challenges/immersion>, productivity P points/hour.
+
+######## end template ########
+#
+# M and N stand for integers, X, Y, H and P can have decimals.
+# M are the number of internal challenges solved by other talents
+# for the specific challenge you're solving
+# N are the number of external challenges references in the OTHERS.lst file
+# for the specific challenge you're solving
+# All of these values must be filled in. There cannot be any fields that do not
+# apply, since all challenges give some score and ranks. See
+# https://fluidattacks.com/web/es/empleos/retos-tecnicos/#puntaje
+# Effort is the number of hours dedicated to solving the challenge,
+# and sending the MR to the training repository not necessarily in one sitting.
+# For example if you dedicated two hours today
+# and later 20 minutes, and three more hours the day after, that's
+# 5 hours and 20 minutes = 5.3 hours.
+# Effort report must cover also the time required
+# for searching existing solutions (OTHERS),
+# as well as linting and compiling time before sending the MR.
+# If the MR gets rejected, additional time used on fixing it has to be added
+# Productivity is the progress in points divided by the effort: P=(Y-X)/H
+#
+# Full hacking example:
+# sol(hack): #0 world-of-wargame, & d1fficult-0ne (54)
+#
+# - others: 0 in, 0 out, 0 total.
+# - score: 25872 initial, 25926 final, 54 progress.
+# - global-rank: 1245 initial, 927 final, 318 progress.
+# - national-rank: 58 initial, 38 final, 20 progress.
+# - effort: 5.2 hours during challenges, productivity 10.4 points/hour.
+#
+# Full programming example:
+# sol(code): #0 codeabbey, 50 (5.22)
+#
+# - others: 5 in, 12 out, 17 total.
+# - score: 22.61 initial, 27.83 final, 5.22 progress.
+# - global-rank: 6781 initial, 6244 final, 537 progress.
+# - national-rank: 127 initial, 109 final,18 progress.
+# - effort: 7.1 hours during immersion, productivity 0.74 points/hour.
+#
+# To use this template automatically every time you commit, run
+# $ git config --local commit.template templates/commit-msg-challenges.txt
+#
+# Remember to make ONE commit for each challenge solution.
+# This commit must also include the appropriate number of OTHERS solutions,
+# which is currently 10 (this might be outdated, check yourself).
+# Then make ONE Merge Request with that ONE commit for ONE challenge,
+# but ONLY after the pipeline has succeeded.
+# See https://fluidattacks.com/web/es/empleos/retos-tecnicos/#envio.
