@@ -1,27 +1,25 @@
 #!/usr/bin/env python
+
+from functools import reduce
+
 """Array Checksum
 brayanestive18.py
 DATA.lst
 """
 
 
-class ArrayChecksum:
-
-    def __init__(self):
-        file = open("DATA.lst", 'r')
-        data_file = file.readlines()
-        self.calculate_checksum(data_file)
-
-    def calculate_checksum(self, data):
-        result = 0
-        cnt = data[0]
-        array = data[1].split(" ")
-        for num in array:
-            result += int(num)
-            result *= 113
-            result = result % 10000007
-
-        print("Result is: " + str(result))
+def read_file(name_file):
+    return open(name_file, 'r').readlines()[1].split(" ")
 
 
-ArrayChecksum()
+def calculate_checksum(result=0, element=0):
+    result += element
+    result *= 113
+    result = result % 10000007
+    return result
+
+
+data_list_int = list(map(int, read_file("DATA.lst")))
+
+print(reduce(calculate_checksum, data_list_int, 0))
+
