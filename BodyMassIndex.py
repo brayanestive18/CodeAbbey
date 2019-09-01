@@ -21,7 +21,7 @@ def normalize_data(element):
     return element.replace('\n', '').split(' ')
 
 
-def convert_list_str_to_list_int(list_str):
+def convert_list_str_to_list_float(list_str):
     """ Funtion for conver str list to int list. """
     return [float(list_str[0]), float(list_str[1])]
 
@@ -52,7 +52,7 @@ def print_result(mass):
 
 result = list(map(normalize_data, get_data()))
 result = list(filter(filter_list_size, result))
-result = list(map(convert_list_str_to_list_int, result))
+result = list(map(convert_list_str_to_list_float, result))
 result = list(map(calculate_body_mass_index, result))
 result = list(map(print_result, result))
 print(' '.join(result))
